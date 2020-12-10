@@ -7,6 +7,9 @@ syntax "nextflow" "\.nf$"
 
 color magenta "\<(workflow|process|input|output|script)\>"
 
+color cyan "^#!.*"
+color cyan "nextflow.enable.dsl"
+
 color green "\<(boolean|byte|char|double|float|int|long|new|short|this|transient)\>"
 color green "\<(break|case|catch|continue|default|do|else|finally|for|if|return|switch|throw|try|while)\>"
 color green "\<(def|abstract|class|extends|final|void|implements|import|instanceof|interface|native|package|private|protected|public|static|strictfp|super|synchronized|throws|volatile)\>"
@@ -21,4 +24,5 @@ icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
 color ,cyan "[[:space:]]+$"
 color yellow ""[^"]*""
 color yellow "'[^']*'"
-color yellow    start=""""([^"),]|$)" end="(^|[^(\])""""
+color yellow start=""""([^"),]|$)" end="(^|[^(\])""""
+color white "\$\{.*\}"
