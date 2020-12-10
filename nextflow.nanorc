@@ -21,13 +21,11 @@ color ,cyan "[[:space:]]+$"
 
 ## strings
 color yellow start=""""([^"),]|$)" end="(^|[^(\])""""
-color yellow start=""([^"),]|$)" end="(^|[^(\])""
-color yellow start=""'([^'),]|$)" end="(^|[^(\])'"
+color yellow ""[^"]*""
 
 color white start="\$\{" end="\}"
 color red "[.+*|=!\%]" "<" ">" "/" "-" "&" "->"
 
-color yellow ""[^"]*""
 color yellow "'[^']*'"
 
 ## comments

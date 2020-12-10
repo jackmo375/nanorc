@@ -17,7 +17,7 @@ process test {
 	beforeScript "\
 		something \
 	"
-	afterScript = "\
+	afterScript "\
 		something else \
 	"
 	echo true
@@ -30,7 +30,7 @@ process test {
 
 	script:
 	"""
-	echo '${params.something} here ${x}'
+	echo "${params.something} here ${x}"
 	"""
 }
 
