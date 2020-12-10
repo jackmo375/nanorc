@@ -18,12 +18,17 @@ color red "\<(true|false|null)\>"
 
 icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
 color ,cyan "[[:space:]]+$"
-color yellow ""[^"]*""
-color yellow "'[^']*'"
+
+## strings
 color yellow start=""""([^"),]|$)" end="(^|[^(\])""""
+color yellow start=""([^"),]|$)" end="(^|[^(\])""
+color yellow start=""'([^'),]|$)" end="(^|[^(\])'"
 
 color white start="\$\{" end="\}"
 color red "[.+*|=!\%]" "<" ">" "/" "-" "&" "->"
+
+##color yellow ""[^"]*""
+##color yellow "'[^']*'"
 
 ## comments
 color cyan "//.*"
