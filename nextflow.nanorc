@@ -27,8 +27,8 @@ color yellow start=""'([^'),]|$)" end="(^|[^(\])'"
 color white start="\$\{" end="\}"
 color red "[.+*|=!\%]" "<" ">" "/" "-" "&" "->"
 
-##color yellow ""[^"]*""
-##color yellow "'[^']*'"
+color yellow ""[^"]*""
+color yellow "'[^']*'"
 
 ## comments
 color cyan "//.*"

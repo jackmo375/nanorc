@@ -17,9 +17,6 @@ process test {
 	beforeScript "\
 		something \
 	"
-	beforeScript = "\
-		somthing \
-	"
 	afterScript = "\
 		something else \
 	"
