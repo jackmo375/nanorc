@@ -5,7 +5,7 @@
 
 syntax "nextflow" "\.(nf|config)$"
 
-color magenta "\<(workflow|process|input|output|script)\>"
+color magenta "\<(workflow|process|channel|Channel)\>"
 color blue "\<(input|output|script)\>"
 color green "\<(val|tuple|path|set|file|stdout|stdin)\>"
 
@@ -25,8 +25,8 @@ color yellow ""[^"]*""
 color yellow "'[^']*'"
 color yellow start=""""([^"),]|$)" end="(^|[^(\])""""
 
-color white "\$\{.*\}"
-color red "[.+*|=!\%]" "<" ">" "/" "-" "&"
+color white start="\$\{" end="\}"
+color red "[.+*|=!\%]" "<" ">" "/" "-" "&" "->"
 
 ## header
 color cyan "^#!.*"

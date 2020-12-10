@@ -3,23 +3,24 @@ nextflow.enable.dsl=2
 
 workflow {
 
-	input:
-	val x
-	output:
-	stdout
+	channel
+		.of(1..10) \
+		| test
 
-	script:
-	"""
-	something else 2 + 3 + 4
-	"""
 }
 
 process test {
 	echo true
 
+	input:
+	val x
+
+	output:
+	stdout
+
 	script:
 	"""
-	echo '${params.something} here'
+	echo '${params.something} here ${x}'
 	"""
 }
 
