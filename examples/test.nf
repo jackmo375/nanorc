@@ -1,0 +1,10 @@
+workflow {
+
+	script:
+	"""
+	something else
+	"""
+}
+
+
+
