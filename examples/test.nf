@@ -4,15 +4,18 @@ nextflow.enable.dsl=2
 workflow {
 
 	input:
-	1 2 3
+	val x
+	output:
+	stdout
 
 	script:
 	"""
-	something else 2 3 4
+	something else 2 + 3 + 4
 	"""
 }
 
 process test {
+	echo true
 
 	script:
 	"""
