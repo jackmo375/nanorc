@@ -18,19 +18,21 @@ color red "\<(true|false|null)\>"
 
 icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
 color ,cyan "[[:space:]]+$"
-color yellow ""[^"]*""
-color yellow "'[^']*'"
+
+# strings
 color yellow start=""""([^"),]|$)" end="(^|[^(\])""""
+color yellow start=""([^"),]|$)" end="(^|[^(\])""
+color yellow start="'([^"),]|$)" end="(^|[^(\])'"
 
 color white start="\$\{" end="\}"
 color red "[.+*|=!\%]" "<" ">" "/" "-" "&" "->"
 
-## comments
+# comments
 color cyan "//.*"
 color cyan start="/\*" end="\*/"
 color brightblue start="/\*\*" end="\*/"
 color cyan start="/\*\*" end="\*/"
 
-## header
+# header
 color cyan "^#!.*"
 color cyan "nextflow.enable.dsl"

@@ -14,6 +14,10 @@ workflow {
 }
 
 process test {
+	beforeScript "\
+		something \
+		something else \
+	"
 	echo true
 
 	input:
