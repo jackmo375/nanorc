@@ -16,6 +16,11 @@ workflow {
 process test {
 	beforeScript "\
 		something \
+	"
+	beforeScript = "\
+		somthing \
+	"
+	afterScript = "\
 		something else \
 	"
 	echo true
