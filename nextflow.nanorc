@@ -6,7 +6,7 @@
 syntax "nextflow" "\.(nf|config)$"
 
 color magenta "\<(workflow|process|channel|Channel)\>"
-color blue "\<(input|output|script)\>"
+color blue "\<(input|output|script|when)\>"
 color green "\<(val|tuple|path|set|file|stdout|stdin)\>"
 
 color green "\<(boolean|byte|char|double|float|int|long|new|short|this|transient)\>"
