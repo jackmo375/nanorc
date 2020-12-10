@@ -1,9 +1,13 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
+/*
+ * Test comment
+ */
+
 workflow {
 
-	channel
+	Channel
 		.of(1..10) \
 		| test
 
@@ -13,7 +17,7 @@ process test {
 	echo true
 
 	input:
-	val x
+	val x	// the story of x is interesting...
 
 	output:
 	stdout
